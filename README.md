@@ -2,6 +2,8 @@
 
 > React Hook which tells you when you&#x27;ve scrolled to bottom
 
+Uses [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) so make sure you can support it.
+
 [![NPM](https://img.shields.io/npm/v/use-scroll-to-bottom.svg)](https://www.npmjs.com/package/use-scroll-to-bottom) 
 ## Install
 
