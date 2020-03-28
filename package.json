@@ -1,7 +1,14 @@
 {
   "name": "use-scroll-to-bottom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Hook which tells you when you&#x27;ve scrolled to bottom",
+  "homepage": "https://tudorgergely.github.io/use-scroll-to-bottom/",
+  "keywords": [
+    "react",
+    "typescript",
+    "react hooks",
+    "scroll"
+  ],
   "author": "tudorgergely",
   "license": "MIT",
   "repository": "tudorgergely/use-scroll-to-bottom",

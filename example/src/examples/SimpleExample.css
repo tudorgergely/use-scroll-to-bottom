@@ -1,0 +1,12 @@
+.simple-container {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.big-element {
+  height: 800px;
+  background-color: #59c072;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

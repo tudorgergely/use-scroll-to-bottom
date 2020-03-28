@@ -1,23 +1,29 @@
-/**
- * @class ExampleComponent
- */
-
 import * as React from 'react'
 
-import styles from './styles.css'
+export const useScrollToBottom = (): [React.RefObject<any>, boolean] => {
+  const ref = React.useRef<any>(null);
+  const [isBottom, setIsBottom] = React.useState(false);
 
-export type Props = { text: string }
+  React.useEffect(() => {
+    let observer: IntersectionObserver;
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+    if (ref.current) {
+      observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBottom(true);
+        } else {
+          setIsBottom(false);
+        }
+      }, {root: ref.current.parentElement});
+      observer.observe(ref.current);
+    }
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    }
+  }, [ref]);
+
+  return [ref, isBottom];
+};

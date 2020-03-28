@@ -1,13 +1,13 @@
 {
-  "name": "use-scroll-to-bottom-example",
+  "name": "use-scroll-to-bottom",
   "homepage": "https://tudorgergely.github.io/use-scroll-to-bottom",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "^1.1.4",
     "use-scroll-to-bottom": "link:.."
   },

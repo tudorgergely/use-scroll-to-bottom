@@ -2,8 +2,7 @@
 
 > React Hook which tells you when you&#x27;ve scrolled to bottom
 
-[![NPM](https://img.shields.io/npm/v/use-scroll-to-bottom.svg)](https://www.npmjs.com/package/use-scroll-to-bottom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
+[![NPM](https://img.shields.io/npm/v/use-scroll-to-bottom.svg)](https://www.npmjs.com/package/use-scroll-to-bottom) 
 ## Install
 
 ```bash
@@ -12,18 +11,27 @@ npm install --save use-scroll-to-bottom
 
 ## Usage
 
+Check [demo](https://tudorgergely.github.io/use-scroll-to-bottom/) and [examples](https://github.com/tudorgergely/use-scroll-to-bottom/tree/master/example)
+
 ```tsx
-import * as React from 'react'
+import React from 'react';
+import {useScrollToBottom} from 'use-scroll-to-bottom'
 
-import MyComponent from 'use-scroll-to-bottom'
+export default function MyComponent() {
+  // isBottom will be true when bottom is reached
+  // add ref to an element right below your scrollable one
+  const [ref, isBottom] = useScrollToBottom();
 
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+  return (
+    <div className="simple-container">
+      <div className="big-element">
+        {isBottom && "Bottom reached"}
+      </div>
+      <div ref={ref}>Bottom</div>
+    </div>
+  )
 }
+
 ```
 
 ## License
