@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 
 export const useScrollToBottom = (): [React.RefObject<any>, boolean] => {
   const ref = React.useRef<any>(null);
@@ -8,13 +8,12 @@ export const useScrollToBottom = (): [React.RefObject<any>, boolean] => {
     let observer: IntersectionObserver;
 
     if (ref.current) {
-      observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-          setIsBottom(true);
-        } else {
-          setIsBottom(false);
-        }
-      }, {root: ref.current.parentElement});
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsBottom(entry.isIntersecting ? true : false);
+        },
+        { root: ref.current.parentElement }
+      );
       observer.observe(ref.current);
     }
 
@@ -22,7 +21,7 @@ export const useScrollToBottom = (): [React.RefObject<any>, boolean] => {
       if (observer) {
         observer.disconnect();
       }
-    }
+    };
   }, [ref]);
 
   return [ref, isBottom];
