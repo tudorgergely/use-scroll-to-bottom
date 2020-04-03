@@ -22,8 +22,3 @@ jobs:
     
     - name: install, build and test example
       run: cd example && npm install && npm run build && npm run test
-
-    - name: deploy
-      uses: amondnet/now-deployment@v2.0.1
-      with:
-        working-directory: ./example
