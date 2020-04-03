@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: "0 2 * * 1-5"
+
+jobs:
+  build:
+    name: build the project
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+
+    - name: install dependencies
+      run: npm install
+
+    - name: build the project
+      run: npm run build
+    
+    - name: test main project
+      run: npm run test
+    
+    - name: test examples
+      run: cd example && npm run test
