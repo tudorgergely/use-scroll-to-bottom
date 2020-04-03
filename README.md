@@ -4,7 +4,7 @@
 
 Uses [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) so make sure you can support it.
 
-[![NPM](https://badgen.net/npm/v/use-scroll-to-bottom)](https://www.npmjs.com/package/use-scroll-to-bottom) [![checks](https://badgen.net/github/checks/tudorgergely/use-scroll-to-bottom)](https://github.com/tudorgergely/use-scroll-to-bottom/actions?workflow=CI) [![size](https://badgen.net/bundlephobia/minzip/use-scroll-to-bottom)](https://bundlephobia.com/result?p=use-scroll-to-bottom)
+[![NPM](https://badgen.net/npm/v/use-scroll-to-bottom)](https://www.npmjs.com/package/use-scroll-to-bottom) [![checks](https://badgen.net/github/checks/tudorgergely/use-scroll-to-bottom)](https://github.com/tudorgergely/use-scroll-to-bottom/actions?workflow=CI) [![size](https://badgen.net/bundlephobia/minzip/use-scroll-to-bottom)](https://bundlephobia.com/result?p=use-scroll-to-bottom) [![coverage](https://coveralls.io/repos/github/tudorgergely/use-scroll-to-bottom/badge.svg?branch=master)](https://coveralls.io/github/tudorgergely/use-scroll-to-bottom?branch=master)
 ## Install
 
 ```bash
