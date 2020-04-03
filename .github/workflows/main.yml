@@ -17,26 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
 
-    - name: install dependencies
-      run: npm install 
-
-    - name: build the project
-      run: npm run build 
+    - name: install, build and test project
+      run: npm install && npm run build && npm run test
     
-    - name: test project
-      run: npm run test
-    
-    - name: cd examples
-      run: cd example 
-    
-    - name: install dependencies (example)
-      run: npm install
-    
-    - name: install dependencies (example)
-      run: npm install 
-
-    - name: build the project (example)
-      run: npm run build 
-    
-    - name: test project (example)
-      run: npm run test
+    - name: install, build and test example
+      run: cd example && npm install && npm run build && npm run test
