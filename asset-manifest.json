@@ -1,6 +1,22 @@
 {
-  "main.css": "static/css/main.d1de5efd.css",
-  "main.css.map": "static/css/main.d1de5efd.css.map",
-  "main.js": "static/js/main.70d5c711.js",
-  "main.js.map": "static/js/main.70d5c711.js.map"
+  "files": {
+    "main.css": "/use-scroll-to-bottom/static/css/main.59cf73dc.chunk.css",
+    "main.js": "/use-scroll-to-bottom/static/js/main.d8228257.chunk.js",
+    "main.js.map": "/use-scroll-to-bottom/static/js/main.d8228257.chunk.js.map",
+    "runtime-main.js": "/use-scroll-to-bottom/static/js/runtime-main.83adf24f.js",
+    "runtime-main.js.map": "/use-scroll-to-bottom/static/js/runtime-main.83adf24f.js.map",
+    "static/js/2.36118bef.chunk.js": "/use-scroll-to-bottom/static/js/2.36118bef.chunk.js",
+    "static/js/2.36118bef.chunk.js.map": "/use-scroll-to-bottom/static/js/2.36118bef.chunk.js.map",
+    "index.html": "/use-scroll-to-bottom/index.html",
+    "precache-manifest.3d76cecb2b1837603f4b32d5858be329.js": "/use-scroll-to-bottom/precache-manifest.3d76cecb2b1837603f4b32d5858be329.js",
+    "service-worker.js": "/use-scroll-to-bottom/service-worker.js",
+    "static/css/main.59cf73dc.chunk.css.map": "/use-scroll-to-bottom/static/css/main.59cf73dc.chunk.css.map",
+    "static/js/2.36118bef.chunk.js.LICENSE.txt": "/use-scroll-to-bottom/static/js/2.36118bef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83adf24f.js",
+    "static/js/2.36118bef.chunk.js",
+    "static/css/main.59cf73dc.chunk.css",
+    "static/js/main.d8228257.chunk.js"
+  ]
 }
