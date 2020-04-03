@@ -1,3 +1,6 @@
 import * as React from "react";
 
-declare function useScrollToBottom(): [React.RefObject<any>, boolean];
+declare function useScrollToBottom<T extends Element>(): [
+  React.RefCallback<T>,
+  boolean
+];

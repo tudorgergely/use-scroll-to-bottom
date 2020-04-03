@@ -1,29 +1,31 @@
-import * as React from 'react'
+import * as React from "react";
 
-export const useScrollToBottom = (): [React.RefObject<any>, boolean] => {
-  const ref = React.useRef<any>(null);
+export const useScrollToBottom = <T extends Element>(): [
+  React.RefCallback<T>,
+  boolean
+] => {
   const [isBottom, setIsBottom] = React.useState(false);
+  const [node, setRef] = React.useState<any>(null);
 
   React.useEffect(() => {
     let observer: IntersectionObserver;
 
-    if (ref.current) {
-      observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-          setIsBottom(true);
-        } else {
-          setIsBottom(false);
-        }
-      }, {root: ref.current.parentElement});
-      observer.observe(ref.current);
+    if (node && node.parentElement) {
+      observer = new IntersectionObserver(
+        ([entry]) => setIsBottom(entry.isIntersecting),
+        { root: node.parentElement }
+      );
+      observer.observe(node);
+    } else {
+      setIsBottom(false);
     }
 
     return () => {
       if (observer) {
         observer.disconnect();
       }
-    }
-  }, [ref]);
+    };
+  }, [node]);
 
-  return [ref, isBottom];
+  return [setRef, isBottom];
 };
