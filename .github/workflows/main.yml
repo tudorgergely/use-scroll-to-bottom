@@ -18,13 +18,25 @@ jobs:
     - uses: actions/setup-node@v1
 
     - name: install dependencies
-      run: npm install
+      run: npm install 
 
     - name: build the project
-      run: npm run build
+      run: npm run build 
     
-    - name: test main project
+    - name: test project
       run: npm run test
     
-    - name: test examples
-      run: cd example && npm run test
+    - name: cd examples
+      run: cd example 
+    
+    - name: install dependencies (example)
+      run: npm install
+    
+    - name: install dependencies (example)
+      run: npm install 
+
+    - name: build the project (example)
+      run: npm run build 
+    
+    - name: test project (example)
+      run: npm run test
